@@ -17,7 +17,6 @@ If you are using Spyder for your Python you might encounter some errors like: �
  
 Spyder (optional) Fixes/Threads for “Cannot close a running event loop” ERROR
 
-Besides the discord.py package you might also need to install aiohttp and nest_asyncio.
 - https://docs.aiohttp.org/en/stable/ 
 - https://pypi.org/project/nest-asyncio/
 - https://stackoverflow.com/questions/57639751/how-to-fix-runtime-error-cannot-close-a-running-event-loop-python-discord-bot 
