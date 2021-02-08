@@ -27,9 +27,9 @@ Both work and especially the Serial.readStringUntil() seems like a very nice fun
 BUT if you search the internet for this function you will see a lot of hate and it is advised to stay far away from this function. 
 Look it up if you are interested. Luckily there are other ways to read multiple characters, I won’t go into details but will post a tutorial which also addresses this. 
 
-![]https://github.com/Atonbom/KimPyRaptor/blob/main/Images/serial2.png
+![](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/serial2.png)
 
-![]https://github.com/Atonbom/KimPyRaptor/blob/main/Images/serial3.png
+![](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/serial3.png)
 
 One question you should always ask yourself when using serial commands is: “Do my commands need to consist of multiple characters?”. 
 For instance if you want to send a command for “Drive Forward” you could sent this entire command or simply sent “w” for instance. 
