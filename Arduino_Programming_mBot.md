@@ -33,5 +33,4 @@ On my git there are some sketches with songs and I wrote comments explaining wha
 
 For more “advanced” Arduino of the mBot and information about the mCore board and pin layout etc. I recommend this instructable: https://www.instructables.com/Advanced-Makeblock-Sensors-DIY/
 
-If you really want to start at the beginning have a look here: 
-https://www.arduino.cc/en/Tutorial/HomePage 
+If you really want to start at the beginning have a look here: https://www.arduino.cc/en/Tutorial/HomePage 
