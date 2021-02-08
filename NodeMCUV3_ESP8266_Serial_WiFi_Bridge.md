@@ -39,3 +39,5 @@ After you setup everything the next time you only have to do the following thing
 2.	Open the virtual COM port on your pc
 3.	Run your python script or whatever you are using to communicate
 
+## I2C
+Here will be a tutorial about connecting an ESP8266 through I2C with the mBot
