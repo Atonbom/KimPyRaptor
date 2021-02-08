@@ -30,7 +30,7 @@ The steps to follow are:
 3.	Wire the ESP8266 to your mBot.  This is the most important part because it differs per ESP8266 if and how you place resistors diodes etc. Instead of wiring the TX to RX and RX to TX I wired TX D7 (GPIO13) and RX D8 (GPIO15) on the ESP8266. The reason is that on boot the ESP8266 outputs some random garbage which will go into your mBot. This can cause issues like for instant your robot starts to drive and won’t respond to your commands anymore. By using D7, D8 and a pulldown resistor this can be overcome according to jeelabs. https://github.com/jeelabs/esp-link/blob/master/FLASHING.md 
 TX D7 also have a diode. D7 is always high so when TX is low it pulls D7 low. This is different than seen in the YouTube video and many other diagrams you might find on the internet. This is mainly because most ESP’s work on 3.3v and in order to power it via the Arduino which is 5V you need a voltage divider. But the NodeMCU V3 can be powered using 5V so there is no need for such a divider. In the Photos folder you can find more pictures of the “real life” setup.
 ![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/ESP8266_mBot_circuitDiagram.jpg)
-![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg)
+![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg = 250x250)
 ![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/ESP8266_mBot_circuitDiagram.jpg)
 https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg
 4.	Configure and test if you can access ESP-link using the Web Server. Watch the YouTube video and/or follow the git. 
