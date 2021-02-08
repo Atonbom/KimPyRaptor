@@ -1,3 +1,5 @@
+# Arduino programming on the mBot
+
 As I said before it’s also possible to program the mCore directly using Arduino code written in the Arduino IDE.
 When writing more advanced programs and when you for instance want to control your bot using a python script it’s better to use this instead of mBot.
 
