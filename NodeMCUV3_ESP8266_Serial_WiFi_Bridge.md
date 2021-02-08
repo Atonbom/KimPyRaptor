@@ -14,7 +14,7 @@ The difference is that RJ25 ports communicate via I2C instead of UART. Both have
 
 I will explain how to set-up both methods
 
-##UART
+## UART
 Using this method the ESP8266 will be connected to the RT/TX pins of the board. I used the following materials make it function properly. It is of course possible to use different components but this will probably require some other electrical components to make it function properly from an electrical engineering point of view.
 -	NodeMCU V3 ESP8266
 -	Diode 1N4148
