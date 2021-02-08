@@ -1,4 +1,4 @@
-#Serial Communication
+# Serial Communication
 
 Writing a program for your robot which it executes when you start it up is nice of course 
 but if you want to control your robot by commands given from a device you need something extra. 
