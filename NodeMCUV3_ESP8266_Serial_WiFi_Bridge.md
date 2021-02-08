@@ -31,12 +31,11 @@ The steps to follow are:
 TX D7 also have a diode. D7 is always high so when TX is low it pulls D7 low. This is different than seen in the YouTube video and many other diagrams you might find on the internet. This is mainly because most ESP’s work on 3.3v and in order to power it via the Arduino which is 5V you need a voltage divider. But the NodeMCU V3 can be powered using 5V so there is no need for such a divider. In the Photos folder you can find more pictures of the “real life” setup.
 ![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/ESP8266_mBot_circuitDiagram.jpg)
 <img src="https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg" width="386.4" height="515.2"> | <img src="https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130048.jpg" width="386.4" height="515.2">
-
-
-https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg
 4.	Configure and test if you can access ESP-link using the Web Server. Watch the YouTube video and/or follow the git. 
 5.	After you did this go to the home tab and from pin assignment presets select “esp-12 swap” and click on change. It should look like this:
+![Flowchart esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/pin_assingment.png)
 6.	Go to Debug log tab and turn the UART debug log: off. This is very important and took me a long time to figure out. If you keep it turned on every now and then the ESP8266 will transmit some data which your Arduino will receive data which your Arduino will receive and executes. In my case my robot started to randomly drive around. I found out by hooking the ESP8266 up to all possible wires in the circuit to figure out where the signal came from. When I found it and couldn’t think my way out of it I tried re-flashing the ESP8266 and also tried 3 other ESP’s. Because at some point the night before around 01:45 it worked perfectly. And of course working when tired and not documenting everything will land you in a situation like this. But 18 hours later and one fried ESP8266 I figured it out again and it had nothing to do with the hardware but with a stupid setting…. A lesson to never forget.
+![Flowchart esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/debug_log.png)
 7.	The next step is setting up a virtual com port on your pc. There are several tools to do this I recommend: HW Virtual Serial Port. The YouTube Video explains how to set it up. NOTE: use port 2323 for serial commands. It should also be possible to upload sketches over WiFi but so far I haven’t succeeded at this, but normal serial communication works great.
 8.	And now test your connection using a serial monitor and have fun!
 
