@@ -1,4 +1,4 @@
-# Discord bot for Arduino UNO
+# Discord bot for Arduino UNO / mBot
 
 I made a discord bot to control the mBot which I recently named KimPyRaptor which sounds way better. The tutorial (link) posted below describes very elaborated how to make a Discord bot in Python and I really recommend to follow it. In this tutorial you will learn:
 - What Discord is
