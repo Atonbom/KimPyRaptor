@@ -78,4 +78,4 @@ async def stop_bot(ctx):
     response = "KimPyRaptor is dreaming of Chinks"
     await ctx.send(response)
 
-bot.run('ODA1Nzk3NTQwNTI3NDcyNjUw.YBgHcA.Ti12ST6Rtmr5LABRQ45iH_FBxXI')
+bot.run('Your Token Here')
