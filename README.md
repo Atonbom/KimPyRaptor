@@ -13,4 +13,7 @@ Next Up:
 - Connecting the mBot to a NodeMCU V3 via I2C
 
 QuickLinks:
+- [Arduino programming on the mBot](https://github.com/Atonbom/KimPyRaptor/blob/main/Arduino_Programming_mBot.md)
+- [NodeMCU V3 ESP8266 serial WiFi bridge for Arduino UNO / mBot](https://github.com/Atonbom/KimPyRaptor/blob/main/NodeMCUV3_ESP8266_Serial_WiFi_Bridge.md)
 - [Pythond and Arduino / mBot](https://github.com/Atonbom/KimPyRaptor/blob/main/Python_Arduino_mBot.md)
+- [Discord bot for Arduino UNO / mBot](https://github.com/Atonbom/KimPyRaptor/blob/main/DiscordBotArduinoUNO.md)
