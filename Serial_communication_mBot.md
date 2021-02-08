@@ -17,13 +17,13 @@ The code below show how you start up / initialize the serial connection and you 
 The number 9600 is the baud rate and defines the rate at which information is transferred in a communication channel. 
 Here is some more detailed information regarding baud rate and the Arduino: https://www.quora.com/What-is-the-baud-rate-and-why-does-Arduino-have-a-baud-rate-of-9-600. 
 
-But the thing to remember is: Default baud rate of an Arduino UNO is 9600. 
+But the thing to remember is: Default `baud rate` of an Arduino UNO is 9600. 
 And if you want to set-up a serial connection you must make sure that on both sides the baud rate is the same e.g. robot 9600 and Arduino serial monitor 9600.
 
 ![](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/serial1.png)
 
-In the tutorial two ways of reading serial data are proposed: Serial.read() and Serial.readStringUntil(). 
-Both work and especially the Serial.readStringUntil() seems like a very nice function to read commands consisting of multiple characters. 
+In the tutorial two ways of reading serial data are proposed: `Serial.read()` and `Serial.readStringUntil()`. 
+Both work and especially the `Serial.readStringUntil()` seems like a very nice function to read commands consisting of multiple characters. 
 BUT if you search the internet for this function you will see a lot of hate and it is advised to stay far away from this function. 
 Look it up if you are interested. Luckily there are other ways to read multiple characters, I won’t go into details but will post a tutorial which also addresses this. 
 
@@ -37,9 +37,9 @@ You may think computers are fast and in Python for instance this wouldn’t matt
 So try to keep your code and commands as minimalistic as possible to gain high speeds. 
 Of course if you don’t care about latency do whatever you want, btw you should always do whatever you want.
 
-To give an example of the impact of using readStringUntil() compared to read(): I wrote a python script that sent serial command to my mBot.
-When I used readStringUntil() it took my bot 2 sec to respond and start driving even though I was sending a single character. 
-Then I tried read() and the bot responded in an instant. So if you want to do real time monitoring or control I advise to use Serial.read(). 
+To give an example of the impact of using `Serial.readStringUntil()` compared to read(): I wrote a python script that sent serial command to my mBot.
+When I used `Serial.readStringUntil()` it took my bot 2 sec to respond and start driving even though I was sending a single character. 
+Then I tried read() and the bot responded in an instant. So if you want to do real time monitoring or control I advise to use `Serial.read()`. 
 
 Serial inputs basics tutorial:
 https://forum.arduino.cc/index.php?topic=396450.0 
