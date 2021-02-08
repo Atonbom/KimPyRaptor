@@ -11,3 +11,6 @@ It's an evolving project and new things will be added in the future. But finishe
 Next Up:
 - Localization => orientation => navigation using a ceiling mounted camera
 - Connecting the mBot to a NodeMCU V3 via I2C
+
+QuickLinks:
+- [Pythond and Arduino / mBot](https://github.com/Atonbom/KimPyRaptor/blob/main/Python_Arduino_mBot.md)
