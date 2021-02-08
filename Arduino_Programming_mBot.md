@@ -16,7 +16,7 @@ Besides the pros of using libraries there are also some cons some of which you w
 One of the most annoying but expected one was the following:
 I tried to use the integrated buzzer on the board but instead of using MeBuzzer I used pin 8 (to which the buzzer is connected) and called on the tone() function.
 For the motors I did use the library and this is what caused conflict. The tone function apparently uses the same timer as the IR sensor in the library.
-So when I compiled the code I got the following error: *Tone.cpp.o (symbol from plugin): In function `timer0_pin_port': (.text+0x0): multiple definition of `__vector_13'*
+So when I compiled the code I got the following error: `Tone.cpp.o (symbol from plugin): In function 'timer0_pin_port': (.text+0x0): multiple definition of '__vector_13'`
 
 Now you might think IR sensor? Yes the mCore also has an integrated IR sensor and receiver. And even though in my code I was not using this sensor I still got the error. 
 This is due to the fact that I included the MeMcore.h library.
