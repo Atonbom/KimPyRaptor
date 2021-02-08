@@ -34,6 +34,7 @@ TX D7 also have a diode. D7 is always high so when TX is low it pulls D7 low. Th
 ![wiring esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/ESP8266_mBot_circuitDiagram.jpg)
 
 <img src="https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130358.jpg" width="386.4" height="515.2"> <img src="https://github.com/Atonbom/KimPyRaptor/blob/main/Images/20210204_130048.jpg" width="386.4" height="515.2">
+
 4.	Configure and test if you can access ESP-link using the Web Server. Watch the YouTube video and/or follow the git. 
 5.	After you did this go to the home tab and from pin assignment presets select “esp-12 swap” and click on change. It should look like this:
 
