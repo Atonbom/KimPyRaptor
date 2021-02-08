@@ -25,3 +25,12 @@ C++ is very strict in this sense and unforgiving opposite to Python where you ca
 Which often works but if it doesn’t and your code is quite extended then well good luck…
 Moral of this story C++ is strict which prevents errors but also can be annoying because you have to write workarounds or rewrite libraries.
 The last I certainly wouldn’t recommend because if a library will be updated in the future you would have to rewrite again and who knows probably a new problem arises.
+
+How I eventually fixed it was using the library and MeBuzzer and I did some rewriting in my code to make it work like I wanted. 
+The weird/annoying thing was/is that when playing a tone using MeBuzzer the timing is different than when using the generic tone() function.
+I downloaded a song for my mBot to play and it worked well with the standard Arduino code but when I used MeBuzzer it was way too slow so I had to rewrite the music code. 
+On my git there are some sketches with songs and I wrote comments explaining what you have to change when you wanna use either pin number or MeBuzzer.
+
+For more “advanced” Arduino of the mBot and information about the mCore board and pin layout etc. I recommend this instructable: https://www.instructables.com/Advanced-Makeblock-Sensors-DIY/
+
+If you really want to start at the beginning have a look here: https://www.arduino.cc/en/Tutorial/HomePage 
