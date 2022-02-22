@@ -11,4 +11,4 @@ The following 2 tutorials elaborate more and have some good examples:
 -	https://realpython.com/arduino-python/ 
 
 
-See Pythob folder for example programs
+See Python folder for example programs
