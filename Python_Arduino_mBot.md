@@ -9,3 +9,6 @@ And when you already have setup the Arduino side which is ready to receive comma
 The following 2 tutorials elaborate more and have some good examples:
 -	https://pythonforundergradengineers.com/python-arduino-LED.html 
 -	https://realpython.com/arduino-python/ 
+
+
+See Pythob folder for example programs
