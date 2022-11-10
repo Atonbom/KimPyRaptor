@@ -3,9 +3,21 @@
 Created on Thu Feb 18 14:09:46 2021
 
 @author: Atonbom
-https://github.com/atonbom 
+https://github.com/Atonbom/KimPyRaptor 
 https://forum.makeblock.com/u/Atonbom/activity
 """
+
+# This code is used to take localize, orientate and navigate the mBot to the desired location.
+# The desired location can be chosen by clicking with the mouse on the videoframe of the top view camera
+
+
+# To run the code make sure all components are connected and turned on in the right order
+# 1. Turn on the mBot
+# 2. Connect the (top view) camera and select the correct channel 
+# 3. Open the virtual COM port on your pc to enable serial communication
+# 4. Run the script
+
+# For more information about the virtual COM port and serial communication => https://github.com/Atonbom/KimPyRaptor 
 
 
 # import the necessary packages
@@ -35,7 +47,7 @@ colorUpper2 = (80, 255, 255)
 
 
 
-#define the camera
+#define the camera + channel
 camera = cv2.VideoCapture(0)
 
 #Initializing variables
