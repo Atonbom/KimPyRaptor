@@ -6,3 +6,6 @@ Python is a very powerful programming language, relatively “easy” and also s
 ## Position and orientation
 The images of the camera in this project are pulled using the OpenCV library for Python. This library provides hundreds of real-time optimized computer vision algorithms and is very user-friendly. 
 Before determining the orientation of the robot it first has to be localized. This was done by placing two squares in different colors on top of the robot. The script than makes masks for each color and draws contours around the objects. After that it searches for the 2 largest enclosing rectangles and calculates the center coordinates (centroids) on the frame.
+
+
+## This section is not yet finished
