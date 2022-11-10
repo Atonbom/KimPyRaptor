@@ -45,7 +45,7 @@ TX D7 also have a diode. D7 is always high so when TX is low it pulls D7 low. Th
 ![Flowchart esp8266 mbot](https://github.com/Atonbom/KimPyRaptor/blob/main/Images/debug_log.png)
 
 7.	The next step is setting up a virtual com port on your pc. There are several tools to do this I recommend: HW Virtual Serial Port. The YouTube Video explains how to set it up. NOTE: use port 2323 for serial commands. It should also be possible to upload sketches over WiFi but so far I haven’t succeeded at this, but normal serial communication works great.
-8.	And now test your connection using a serial monitor and have fun!
+8.	And now test your connection using a serial monitor (For instance PUTTY) and have fun!
 
 After you setup everything the next time you only have to do the following things:
 1.	Turn on the mBot
