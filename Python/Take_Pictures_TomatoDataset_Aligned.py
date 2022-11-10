@@ -3,9 +3,27 @@
 Created on Thu May 20 13:20:16 2021
 
 @author: Atonbom
-https://github.com/atonbom 
+https://github.com/Atonbom/KimPyRaptor 
 https://forum.makeblock.com/u/Atonbom/activity
 """
+
+#This code is used to take pictures of tomatoes/objects an build a dataset
+#It captures an rgb image and a depth image and aligns these two
+#An annotation file is created after taking the pictures which can be used in the deeplearning model to estimate tomato weight
+
+
+#This code will take color and depth pictures by using a Intel Realsense camera
+#The code works with a D435
+#Also the depth map of the pictures is saved in a csv file
+#When running the code a picture can be taken by pressing the "space bar"
+#Before running the code please define the angle, batch, distances, repetition, species, age
+#and location of the "weight.csv" file
+#This information will be used for the filenames and making an annotation .csv file
+#Press "Esc" to exit the script
+#When "repeat" is higher than 1 and you have more than 1 distance the script assumes that you
+#first take all the pictures for the 1st distance than the 2nd distance etc..
+#At the end of the code a "weight_volume.csv" file will be combined with the other annotation data
+#into a new annotation .csv file.
 
 # First import the library
 import pyrealsense2 as rs
@@ -30,22 +48,9 @@ annotation = pd.DataFrame(columns=
 'truss_id', #truss id inside the batch
 'object_id', # object id inside the batch
 'unique_batch_id', # unique id for every datapoint/photo inside the batch
-'healthy'])
+'healthy']) # is the tomato healthy yes or no, this is not measured or calculated but rather an observation
 
 ###############################################################################
-
-#This code will take color and depth pictures by using a Intel Realsense camera
-#The code works with a D435
-#Also the depth map of the pictures is saved in a csv file
-#When running the code a picture can be taken by pressing the "space bar"
-#Before running the code please define the angle, batch, distances, repetition, species, age
-#and location of the "weight.csv" file
-#This information will be used for the filenames and making an annotation .csv file
-#Press "Esc" to exit the script
-#When "repeat" is higher than 1 and you have more than 1 distance the script assumes that you
-#first take all the pictures for the 1st distance than the 2nd distance etc..
-#At the end of the code a "weight_volume.csv" file will be combined with the other annotation data
-#into a new annotation .csv file.
 
 #Insert here the angle of the camera towards the surface
 #For instance "45d" for a 45 degrees angle or "09d" for a 9 degrees angle
@@ -70,13 +75,13 @@ species = 'Merlice'
 #Insert here the age of the tomatoes/objects approximately in days
 age = '48'
 
-#Define ocation of "weight_volume.csv" file should contain 7 columns
+#Define location of "weight_volume.csv" file should contain 7 columns
 #first column should contain "object_id"
 #second column should contain the "truss_id"
 #third column should contain the weight in grams 
 #sixth column the volume in ml
 #seventh column the density in g/cm3 or g/ml
-#4th and 5th column can be used as calculation columns
+#4th and 5th column can be used as calculation columns or left empty
 weight_volume_dataframe = pd.read_csv('output_pics/weight_volume.csv', sep=';', header=0)
 weight_volume = weight_volume_dataframe.values
 
@@ -91,7 +96,7 @@ weight_volume = weight_volume_dataframe.values
 pipeline = rs.pipeline()
 
 # Create a config and configure the pipeline to stream
-#  different resolutions of color and depth streams
+# different resolutions of color and depth streams
 config = rs.config()
 
 # Get device product line for setting a supporting resolution
@@ -161,7 +166,7 @@ try:
         depth_image = np.asanyarray(aligned_depth_frame.get_data())
         color_image = np.asanyarray(color_frame.get_data())
         
-        # Render depth image to dept color image:
+        # Render depth image to depth color image:
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
     
         #Show the color and depth images on screen
@@ -236,7 +241,7 @@ try:
             print('')
             
             #Make an info screen to show information about previous picture taken
-            # make a black image
+            #make a black image to print text on
             img = np.zeros((800, 1500))
             cv2.putText(img,'Object id:'+object_id_str,(20,100),cv2.FONT_HERSHEY_COMPLEX,3.5,(255,255,255),thickness = 3)
             cv2.putText(img,'Distance:'+distance_str,(20,300),cv2.FONT_HERSHEY_COMPLEX,3.5,(255,255,255),thickness = 3)
