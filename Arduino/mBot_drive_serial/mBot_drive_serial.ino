@@ -68,7 +68,7 @@ void loop()
 //      Serial.println(command);
 //      Serial.println("Turning Right");
     }
-    else if (command == 'q') { //right
+    else if (command == 'q') { //Stop
       leftspeed = 0;
       rightspeed = 0;
       digitalWrite(ledPin, ! digitalRead(ledPin));
